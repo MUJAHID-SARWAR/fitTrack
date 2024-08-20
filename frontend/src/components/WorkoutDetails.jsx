@@ -10,7 +10,7 @@ const WorkoutDetails = ({ workout }) => {
   const [reps, setReps] = useState(workout.reps);
 
   const handleClickDelete = async () => {
-    const response = await fetch('http://localhost:4000/api/workouts/' + workout._id, {
+    const response = await fetch('https://fittrack-z4vj.onrender.com/api/workouts/' + workout._id, {
       method: 'DELETE'
     });
     const json = await response.json();
@@ -26,7 +26,7 @@ const WorkoutDetails = ({ workout }) => {
 
   const handleUpdate = async () => {
     try {
-      const response = await fetch('http://localhost:4000/api/workouts/' + workout._id, {
+      const response = await fetch('https://fittrack-z4vj.onrender.com/api/workouts/' + workout._id, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

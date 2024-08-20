@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() =>{
       const fetchWorkout = async () => {
-         const reponse = await fetch('http://localhost:4000/api/workouts')
+         const reponse = await fetch('https://fittrack-z4vj.onrender.com/api/workouts')
          const json = await reponse.json()
 
          if(reponse.ok) {
